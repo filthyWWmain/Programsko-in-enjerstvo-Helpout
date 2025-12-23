@@ -168,29 +168,21 @@ if (
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="./oglas_detalji.css">
-
 </head>
 <body>
     <div class="container">
-        <!-- kopia je na svin stranica ista jer mi se ni dalo raditi zasebi file za sve headere...
-        sad je prekasno za to-->
         <header>
             <div class="logo">HELPOUT</div>
-
             <nav>
                 <ul>
                     <li><a href="Helpout_main.php">Home</a></li>
-
                     <?php if (!isset($_SESSION['user_id'])): ?>
                         <li><a href="../pages/register_option.html">Register</a></li>
                         <li><a href="../pages/login.html">Log in</a></li>
-
                     <?php elseif ($_SESSION['user_type'] === 'udruga'): ?>
                         <li><a href="../pages/create_oglas.html">Create listing</a></li>
                         <li><a href="../pages/account_udruga.php">My account</a></li>
                         <li><a href="../includes/log_out.php">Log out</a></li>
-                        
-
                     <?php elseif ($_SESSION['user_type'] === 'volonter'): ?>
                         <li><a href="../includes/log_out.php">Log out</a></li>
                     <?php endif; ?>
@@ -203,55 +195,120 @@ if (
             <div class="container">
 
                 <h1><?= htmlspecialchars($oglas['naziv_aktivnosti']) ?></h1>
-                <ul>
-                    <li><p><strong class="osta_san_bez_ideja_vise_za_nazive">Organisation:</strong> <?= htmlspecialchars($oglas['naziv_udruge']) ?></p></li>
-                    <li><p><strong class="osta_san_bez_ideja_vise_za_nazive">city:</strong> <?= htmlspecialchars($oglas['grad']) ?></p></li>
-                    <li><p><strong class="osta_san_bez_ideja_vise_za_nazive">Adress:</strong> <?= htmlspecialchars($oglas['adresa']) ?></p></li>
-                    <li><p><strong class="osta_san_bez_ideja_vise_za_nazive">Date:</strong> <?= $oglas['datum'] ?> u <?= $oglas['vrijeme'] ?></p></li>
-                    <li><p><strong class="osta_san_bez_ideja_vise_za_nazive">Duration:</strong> <?= $oglas['trajanje_minute'] ?> min</p></li>
-                    <li><p><strong class="osta_san_bez_ideja_vise_za_nazive">Activity type:</strong> <?= htmlspecialchars($oglas['vrsta_aktivnosti']) ?></p></li>
-                    <li><p><strong class="osta_san_bez_ideja_vise_za_nazive">Required points:</strong> <?= $oglas['min_potrebni_bodovi'] ?></p></li>
-                    <li><p><strong class="osta_san_bez_ideja_vise_za_nazive">Earned points:</strong> <?= $oglas['osvojeni_bodovi'] ?></p></li>
-                    <li><p><strong class="osta_san_bez_ideja_vise_za_nazive">Free places:</strong> <?= $slobodna_mjesta ?> / <?= $max_volontera ?></p></li>
-                </ul>
+                
+                <!-- PROMJENA OVDJE - GRID LAYOUT UMJESTO LISTE -->
+                <div class="details-grid">
+                    <div class="grid-item">
+                        <div class="icon">🏢</div>
+                        <div class="grid-content">
+                            <strong class="label">Organisation:</strong>
+                            <span class="value"><?= htmlspecialchars($oglas['naziv_udruge']) ?></span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="icon">📍</div>
+                        <div class="grid-content">
+                            <strong class="label">City:</strong>
+                            <span class="value"><?= htmlspecialchars($oglas['grad']) ?></span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="icon">🏠</div>
+                        <div class="grid-content">
+                            <strong class="label">Address:</strong>
+                            <span class="value"><?= htmlspecialchars($oglas['adresa']) ?></span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="icon">📅</div>
+                        <div class="grid-content">
+                            <strong class="label">Date & Time:</strong>
+                            <span class="value"><?= $oglas['datum'] ?> at <?= $oglas['vrijeme'] ?></span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="icon">⏱️</div>
+                        <div class="grid-content">
+                            <strong class="label">Duration:</strong>
+                            <span class="value"><?= $oglas['trajanje_minute'] ?> minutes</span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="icon">🎯</div>
+                        <div class="grid-content">
+                            <strong class="label">Activity type:</strong>
+                            <span class="value"><?= htmlspecialchars($oglas['vrsta_aktivnosti']) ?></span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="icon">⭐</div>
+                        <div class="grid-content">
+                            <strong class="label">Required points:</strong>
+                            <span class="value"><?= $oglas['min_potrebni_bodovi'] ?></span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item">
+                        <div class="icon">🏆</div>
+                        <div class="grid-content">
+                            <strong class="label">Earned points:</strong>
+                            <span class="value"><?= $oglas['osvojeni_bodovi'] ?></span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-item grid-item-full">
+                        <div class="icon">👥</div>
+                        <div class="grid-content">
+                            <strong class="label">Available spots:</strong>
+                            <span class="value highlight"><?= $slobodna_mjesta ?> / <?= $max_volontera ?></span>
+                        </div>
+                    </div>
+                </div>
 
                 <hr>
 
-                <p id="opis"><?= nl2br(htmlspecialchars($oglas['opis'])) ?></p>
+                <div class="description-box">
+                    <h3>Description</h3>
+                    <p id="opis"><?= nl2br(htmlspecialchars($oglas['opis'])) ?></p>
+                </div>
                 <hr>
 
                 <?php if (isset($_SESSION['user_type']) && $_SESSION['user_type'] === 'volonter'): ?>
-
                     <?php if (isset($poruka)): ?> 
-                        <p style="text-color: red; margin-bottom: 15px;"> 
+                        <div class="message <?= strpos($poruka, 'successfully') !== false ? 'success' : 'error' ?>">
                             <strong><?= htmlspecialchars($poruka) ?></strong> 
-                        </p> 
+                        </div> 
                     <?php endif; ?>
 
-                    <form method="post">
-                        <button type="submit" name="prijavi_se" class="btn" <?= $slobodna_mjesta === 0 ? 'disabled' : '' ?>>    
+                    <form method="post" class="action-buttons">
+                        <button type="submit" name="prijavi_se" class="btn btn-primary" <?= $slobodna_mjesta === 0 ? 'disabled' : '' ?>>    
                             Apply for listing
                         </button>
-                        <button type="submit" name="odjavi_se_s_oglasa" class="btn">
+                        <button type="submit" name="odjavi_se_s_oglasa" class="btn btn-secondary">
                             Unregister from listing
                         </button>
                     </form>
 
                 <?php elseif (!isset($_SESSION['user_id'])): ?>
-
-                    <p><strong>You need to be logged in to apply for a listing.</strong></p>
-
+                    <div class="login-warning">
+                        <strong>You need to be logged in to apply for a listing.</strong>
+                    </div>
                 <?php endif; ?>
 
-                <div class="button-group_last">    
-                    <a href="Helpout_main.php" class="btn">← Back</a>
+                <div class="button-group">    
+                    <a href="Helpout_main.php" class="btn btn-back">← Back to Home</a>
                     <?php if (!isset($_SESSION['user_id'])): ?>
-                        <a href="../pages/login.html" class="btn" id="log_in_btn">Log in</a>
+                        <a href="../pages/login.html" class="btn btn-login">Log in</a>
                     <?php endif; ?>
                 </div>
             </div>
         </div>
     </div>
-
 </body>
 </html>
