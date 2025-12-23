@@ -19,32 +19,32 @@
                     
                     <!-- Row 1 -->
                     <div class="form-group full-width">
-                        <label for="naziv_aktivnosti">Naziv aktivnosti</label>
-                        <input id="naziv_aktivnosti" type="text" name="naziv_aktivnosti" placeholder="Naziv aktivnosti...">
+                        <label for="naziv_aktivnosti">Activity:</label>
+                        <input id="naziv_aktivnosti" type="text" name="naziv_aktivnosti" placeholder="Activity...">
                     </div>
                     
                     <!-- Row 2 -->
                     <div class="form-group full-width">
-                        <label for="opis">Opis</label>
-                        <textarea id="opis" name="opis" placeholder="Opis..."></textarea>
+                        <label for="opis">Description:</label>
+                        <textarea id="opis" name="opis" placeholder="Description..."></textarea>
                     </div>
                     
                     <!-- Row 3 - Grad i Adresa u istom redu -->
                     <div class="form-row">
                         <div class="form-group half-width">
-                            <label for="grad">Grad</label>
-                            <input id="grad" type="text" name="grad" placeholder="Grad...">
+                            <label for="grad">City:</label>
+                            <input id="grad" type="text" name="grad" placeholder="City...">
                         </div>
                         <div class="form-group half-width">
-                            <label for="adresa">Adresa</label>
-                            <input id="adresa" type="text" name="adresa" placeholder="Adresa...">
+                            <label for="adresa">Address:</label>
+                            <input id="adresa" type="text" name="adresa" placeholder="Address...">
                         </div>
                     </div>
                     
                     <!-- Row 4 - Datum i Vrijeme u istom redu -->
                     <div class="form-row">
                         <div class="form-group half-width">
-                            <label for="datum">Datum</label>
+                            <label for="datum">Date:</label>
                             <input id="datum" type="date" name="datum">
                             <script>
                                 const dateInput = document.getElementById('datum');
@@ -68,27 +68,27 @@
                             </script>
                         </div>
                         <div class="form-group half-width">
-                            <label for="vrijeme">Vrijeme</label>
-                            <input id="vrijeme" type="time" name="vrijeme">
+                            <label for="vrijeme">Time</label>
+                            <input id="vrijeme" type="time" name="Time">
                         </div>
                     </div>
                     
                     <!-- Row 5 - Trajanje i Vrsta aktivnosti u istom redu -->
                     <div class="form-row">
                         <div class="form-group half-width">
-                            <label for="trajanje">Trajanje (minute)</label>
-                            <input id="trajanje" type="number" name="trajanje" placeholder="Trajanje..." min="1" max="720">
+                            <label for="trajanje">Duration (minutes)</label>
+                            <input id="trajanje" type="number" name="trajanje" placeholder="Duration..." min="1" max="720">
                         </div>
                         <div class="form-group half-width">
-                            <label for="vrsta_aktivnost">Vrsta aktivnosti</label>
+                            <label for="vrsta_aktivnost">Activity type</label>
                             <select id="vrsta_aktivnost" name="vrsta_aktivnost">
-                                <option value="">Odaberite vrstu...</option>
-                                <option value="ekologija">Ekologija</option>
-                                <option value="edukacija">Edukacija</option>
-                                <option value="humanitarni">Humanitarni rad</option>
-                                <option value="kultura">Kultura</option>
-                                <option value="sport">Sport</option>
-                                <option value="drugo">Drugo</option>
+                                <option value="">Choose type...</option>
+                                <option value="ekologija">Ecology</option>
+                                <option value="edukacija">Education</option>
+                                <option value="humanitarni">Humanitarian work</option>
+                                <option value="kultura">Culture</option>
+                                <option value="sport">Sports</option>
+                                <option value="drugo">Other</option>
                             </select>
                         </div>
                     </div>
@@ -96,12 +96,12 @@
                     <!-- Row 6 -->
                     <div class="form-row">
                         <div class="form-group half-width">
-                            <label for="max_volontera">Maksimalan broj volontera</label>
-                            <input id="max_volontera" type="number" name="max_volontera" placeholder="Max volontera..." min="1">
+                            <label for="max_volontera">Maximum number of volunteers</label>
+                            <input id="max_volontera" type="number" name="max_volontera" placeholder="Maximum number of volunteers..." min="1">
                         </div>
                         <div class="form-group half-width">
-                            <label for="Min_bodovi">Minimalni broj bodova</label>
-                            <input id="Min_bodovi" type="number" name="minimalni_bodovi" placeholder="Minimalni broj bodova...">
+                            <label for="Min_bodovi">Minimum number of points</label>
+                            <input id="Min_bodovi" type="number" name="minimalni_bodovi" placeholder="Minimum number of points...">
                         </div>
                     </div>
                 

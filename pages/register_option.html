@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Register_page</title>
-        <!--.... Jer mora raditi na 67 ***** browsera.... -->
+        <title>Register - HELPOUT</title>
         <link rel="stylesheet" type="text/css" href="../styles/normalize.css" />
-        <!-- main CSS sheet-->
         <link rel="stylesheet" type="text/css" href="../styles/register_option.css" />
     </head>
     <body>
         <img class="login_register_bg_img" src="../images/register_login_bg_img.png">
-        <form action="../includes/user_inputs.php" method ="post">
-            <h2>REGISTER</h2>
-            <h3>Register as a volunteer or an organization</h3>
-            <label for = "Volonter">Volonter</label>
-            <button type="button" onclick="window.location.href='register_volonter.html'">Volonter</button>
-            <label for = "organization">Organization?</label>
-            <button type="button" onclick="window.location.href='register_udruga.html'">Organization</button>
-            <button type="button" id="button_back" onclick="window.location.href='Helpout_main.php'">Go back....</button>
+        
+        <form action="../includes/user_inputs.php" method="post">
+            <div class="form-header">
+                <h2>REGISTER</h2>
+                <h3>Choose your registration type below</h3>
+            </div>
+            
+            <div class="form-group">
+                <label>Volunteer</label>
+                <button type="button" class="btn-volonter" onclick="window.location.href='register_volonter.html'">
+                    Register as Volunteer
+                </button>
+                <p class="description">Join as an individual to volunteer for activities</p>
+            </div>
+            
+            <div class="form-group">
+                <label>Organization</label>
+                <button type="button" class="btn-udruga" onclick="window.location.href='register_udruga.html'">
+                    Register as Organization
+                </button>
+                <p class="description">Register your organization to post listing</p>
+            </div>
+            
+            <div class="divider">
+                <span>OR</span>
+            </div>
+            
+            <button type="button" id="button_back" onclick="window.location.href='Helpout_main.php'">
+                Back to Home
+            </button>
+            
+            <div class="login-link">
+                Already have an account? 
+                <a href="login.html">Login here</a>
+            </div>
         </form>
     </body>
 </html>
