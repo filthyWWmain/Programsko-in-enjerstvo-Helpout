@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f0f9f8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styling */
+header{
+    padding-top: 20px;
+}
+
+/* Details card */
+.details-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+.details-card h1 {
+    color: #2a9d8f;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #f0f9f8;
+}
+
+.details-card ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.details-card li {
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f9f8;
+    display: flex;
+    align-items: center;
+}
+
+.details-card li:last-child {
+    border-bottom: none;
+}
+
+.details-card li strong {
+    color: #2a9d8f;
+    min-width: 200px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.details-card li p {
+    color: #333;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #2a9d8f, #8FD3CE);
+    margin: 30px 0;
+    border-radius: 2px;
+}
+
+#opis {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Description */
+.details-card > p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #f8fdfc;
+    border-radius: 10px;
+    border-left: 4px solid #8FD3CE;
+}
+
+/* Messages */
+.details-card p strong {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.details-card p strong[style*="color: green"] {
+    background: #d4edda;
+    color: #155724 !important;
+    border: 1px solid #c3e6cb;
+}
+
+.details-card p strong:not([style*="color: green"]) {
+    background: #8FD3CE;
+    color: white !important;
+    border: 1px solid #21867a;
+    
+}
+.osta_san_bez_ideja_vise_za_nazive {
+    max-width: 200px;
+}
+
+/* Buttons */
+form[method="post"] {
+    display: flex;
+    justify-content: space-between;
+}
+.view-volonteri-button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    width: 45%;
+    text-align: center;
+    display: inline-block;
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #2a9d8f, #8FD3CE);
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    min-width: 200px;;
+    border: 1px solid #21867a;
+}
+#log_in_btn {
+   display: inline-block;
+    background: white ;
+    color: #21867a;
+    
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #21867a, #7bc4be);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(42, 157, 143, 0.3);
+}
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.details-card > .btn {
+    background: white;
+    color: #2a9d8f;
+    border: 2px solid #8FD3CE;
+    margin-top: 20px;
+}
+
+.details-card > .btn:hover {
+    background: #f0f9f8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(143, 211, 206, 0.2);
+}
+
+/* Login warning */
+.details-card > p > strong {
+    background: #fff3cd;
+    color: #856404 !important;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+.button-group_last {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0 0;
+    justify-content: space-around;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .search-box {
+        width: 100%;
+    }
+    
+    .search-box input {
+        width: 100%;
+    }
+    
+    .details-card {
+        padding: 25px;
+        margin: 20px;
+    }
+    
+    .details-card h1 {
+        font-size: 2rem;
+    }
+    
+    .details-card li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .details-card li strong {
+        min-width: auto;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .details-card {
+        padding: 20px;
+    }
+    
+    .details-card h1 {
+        font-size: 1.8rem;
+    }
+    
+    .details-card li p {
+        font-size: 1rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.details-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Icon styling */
+.details-card li:before {
+    content: "✓";
+    color: #2a9d8f;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Special styling for contact info */
+.details-card li:nth-child(1):before {
+    content: "🏢";
+    width: 30px;
+    padding-bottom: 2.5%;
+}
+
+.details-card li:nth-child(2):before {
+    content: "📍";
+    width: 30px;
+    padding-bottom: 2.5%;
+}
+
+.details-card li:nth-child(3):before {
+    content: "🏠";
+    width: 30px;
+    padding-bottom: 2.5%;
+}
+
+.details-card li:nth-child(4):before {
+    content: "📅";
+    padding-bottom: 2.5%;
+    width: 30px;
+}
+
+.details-card li:nth-child(5):before {
+    content: "⏱️";
+    width: 30px;
+    padding-bottom: 2.5%;
+}
+
+.details-card li:nth-child(6):before {
+    content: "🎯";
+    width: 30px;
+    padding-bottom: 2.5%;
+}
+
+.details-card li:nth-child(7):before {
+    content: "⭐";
+    width: 30px;
+    padding-bottom: 2.5%;
+}
+
+.details-card li:nth-child(8):before {
+    content: "🏆";
+    width: 30px;
+    padding-bottom: 2.5%;
+}
+.details-card li:nth-child(9):before {
+    width: 30px;
+    padding-bottom: 2.5%;
+}

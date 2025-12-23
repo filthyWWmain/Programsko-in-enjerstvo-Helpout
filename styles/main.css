@@ -1,0 +1,304 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f7f7f7;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+    padding: 20px 0;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 600;
+    color: #8FD3CE;
+    letter-spacing: 3px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+nav a.active{
+    background: #d1f0ed;
+}
+
+nav a:hover {
+    background: #b0e9e3;
+    transform: scale(1.3);
+    transition: all 0.5s;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #c5ebe7;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 5px;
+}
+
+.search-box button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* HERO SECTION */
+
+.hero {
+    position: relative;
+    width: 75%;
+    height: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    margin-left:10% ;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(100%);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-0%, -50%);
+    color: white;
+    max-width: 450px;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.hero-text p {
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.btn {
+    padding: 10px 22px;
+    background: white;
+    color: #4ba6a1;
+    border-radius: 18px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.btn:hover{
+    background: #4ba6a1;
+    color: white;
+    transition: all 0.5s;
+}
+
+/* kartice na dnu */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, #2a9d8f, #8FD3CE);
+    margin: 50px 0;
+    border-radius: 2px;
+}
+
+.cards {
+    width: 75%;
+    margin-left: 10%;
+    display: flex;
+    flex-wrap: wrap;              
+    gap: 25px;
+    align-items: stretch;
+}
+
+.card {
+    background: #cdece9;
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 100%;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    opacity: 0.75;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+.card p{
+    padding-bottom: 5px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    flex: 0 0 calc(33.333% - 17px);
+}
+
+.card-link:hover .card {
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+
+
+/* title for volunteer account page */
+#Title {
+
+    background: white;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    color: #2a9d8f;
+    margin-top: 5%;
+    margin-left: 30%;
+    margin-right: 35%;
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 2px solid #e0f0ee;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);    
+}
+
+#Title:focus {
+    outline: none;
+    border-color: #8FD3CE;
+    box-shadow: 0 0 0 3px rgba(143, 211, 206, 0.2);
+    background: white;
+}
+
+#Title::placeholder {
+    color: #999;
+}
+/* Profile Section */
+.profile-section {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0f0ee;
+}
+
+.profile-section h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #2a9d8f;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #8FD3CE;
+}
+
+/* Profile Details Grid */
+.volonter-detalji {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.volonter-detalji li {
+    background: #f8fdfc;
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid #e0f0ee;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.volonter-detalji li:hover {
+    box-shadow: 0 5px 15px rgba(143, 211, 206, 0.2);
+    transform: translateY(-2px);
+}
+
+.volonter-detalji strong {
+    color: #2a9d8f;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.volonter-detalji li span {
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Points Styling (poseban stil za bodove) */
+.points-display {
+    background: linear-gradient(135deg, #8FD3CE, #2a9d8f);
+    color: white !important;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 20px !important;
+    margin-top: 5px;
+}
+
+/* Email Styling */
+.email-display {
+    color: #4a90e2 !important;
+    word-break: break-all;
+}
+
+/* Date Styling */
+.date-display {
+    color: #666;
+    font-style: italic;
+}
+
+

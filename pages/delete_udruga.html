@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Delete Udruga</title>
+        <!--.... Jer mora raditi na 67 ***** browsera.... -->
+        <link rel="stylesheet" type="text/css" href="../styles/normalize.css" />
+        <!-- main CSS sheet-->
+        <link rel="stylesheet" type="text/css" href="../styles/register_udruga.css" />
+    </head>
+    <body>
+        <img class="login_register_bg_img" src="../images/register_login_bg_img.png">
+        <form action="../includes/delete_udruga.php" method ="post">
+            <h2>DELETE ORGANISATION ACCOUNT?</h2><br>
+            <h3>Are you sure you want to delete your account?</h3>
+            <br>
+            <h3>To confirm you identity please input your password:</h3>
+            <br>
+            <label for = "password">Password?</label>
+            <input id="password"  type="password" name = "password" placeholder="Password...">
+            <br>
+            <button type="submit" class="btn-submit">Submit</button>
+            <br>
+            <button type="button" class="btn-submit" id="button_back" onclick="window.location.href='account_udruga.php'">Go back....</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Delete Oglas</title>
+        <!--.... Jer mora raditi na 67 ***** browsera.... -->
+        <link rel="stylesheet" type="text/css" href="../styles/normalize.css" />
+        <!-- main CSS sheet-->
+        <link rel="stylesheet" type="text/css" href="../styles/register_udruga.css" />
+    </head>
+    <body>
+        <img class="login_register_bg_img" src="../images/register_login_bg_img.png">
+        <form action="../includes/delete_oglas.php" method ="post">
+            <h2>DELETE A LISTING</h2>
+            <label for = "oib">OIB?</label>
+            <input id="oib" type="text" name = "oib" placeholder="OIB...">
+            <label for = "naziv_aktivnosti">Name of activity?</label>
+            <input id="naziv_aktivnosti"  type="text" name = "naziv_aktivnosti" placeholder="Name of activity...">
+            <label for = "grad">City?</label>
+            <input id="grad"  type="text" name = "grad" placeholder="City...">
+            <button type="submit">Delete</button>
+            <button type="button" id="button_back" onclick="window.location.href='learn_more.html'">Go back....</button>
+        </form>
+    </body>
+</html>

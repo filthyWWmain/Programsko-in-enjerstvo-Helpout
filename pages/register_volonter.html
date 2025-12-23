@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register page - Volunteer</title>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Normalize CSS -->
+        <link rel="stylesheet" type="text/css" href="../styles/normalize.css" />
+        <!-- Main CSS sheet -->
+        <link rel="stylesheet" type="text/css" href="../styles/register_udruga.css" />
+</head>
+<body>
+    <div class="container">
+        <img class="login_register_bg_img" src="../images/register_login_bg_img.png" alt="Background">
+        
+        <form action="../includes/volunteer_inputs.php" method="post">
+            <div class="form-header">
+                <h2>REGISTER</h2>
+                <h3>Join our volunteer community</h3>
+            </div>
+            
+            <div class="form-grid">
+                <!-- Row 1 - First Name and Last Name -->
+                <div class="form-group full-width">
+                    <label for="firstname">First Name</label>
+                    <input id="firstname" type="text" name="firstName" placeholder="Enter first name..." required>
+                </div>
+                <div class="form-group full-width">
+                    <label for="lastname">Last Name</label>
+                    <input id="lastname" type="text" name="lastName" placeholder="Enter last name..." required>
+                </div>
+                
+                <!-- Row 2 - Email -->
+                <div class="form-group full-width">
+                    <label for="email">E-mail Address</label>
+                    <input id="email" type="email" name="email" placeholder="Enter e-mail..." required>
+                    <small class="hint">We'll send a confirmation to this address</small>
+                </div>
+                
+                <!-- Row 3 - Password -->
+                <div class="form-group half-width">
+                        <label for="password">Password</label>
+                        <div class="password-container">
+                            <input id="password" type="password" name="password" placeholder="Create password..." required>
+                            <button type="button" class="toggle-password" data-target="password">👁️</button>
+                        </div>
+                        <small class="hint">Minimum 8 characters</small>
+                    </div>
+                    
+                    <!-- Row 5 - Confirm Password -->
+                    <div class="form-group half-width">
+                        <label for="confirm_password">Confirm Password</label>
+                        <div class="password-container">
+                            <input id="confirm_password" type="password" name="confirm_password" placeholder="Confirm password..." required>
+                            <button type="button" class="toggle-password" data-target="confirm_password">👁️</button>
+                        </div>
+                    </div>
+            </div>
+            
+            <!-- Password requirements -->
+            <div class="password-requirements">
+                <p><strong>Password requirements:</strong></p>
+                <ul>
+                    <li>At least 8 characters</li>
+                    <li>At least one uppercase letter</li>
+                    <li>At least one number</li>
+                    <li>At least one special character</li>
+                </ul>
+            </div>
+            
+            <!-- Buttons -->
+            <div class="button-group">
+                <button type="submit" class="btn-submit">CREATE ACCOUNT</button>
+                <button type="button" class="btn-back" onclick="window.location.href='register_option.html'">Go Back</button>
+            </div>
+            
+            <div class="login-link">
+                <p>Already have an account? <a href="login.html">Login here</a></p>
+            </div>
+        </form>
+    </div>
+    
+    <script src="../js_functions/password_functions.js"></script>
+</body>
+</html>

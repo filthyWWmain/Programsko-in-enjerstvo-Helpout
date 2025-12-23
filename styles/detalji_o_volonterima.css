@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e0f0ee;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 600;
+    color: #8FD3CE;
+    letter-spacing: 3px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    background: #b0e9e3;
+    transform: scale(1.05);
+}
+
+/* PAGE HEADER */
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #2a9d8f;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #8FD3CE;
+}
+
+/* VOLUNTEER LIST */
+.volunteer-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.volunteer-item {
+    background: #f8fdfc;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e0f0ee;
+    transition: all 0.3s;
+}
+
+.volunteer-item:hover {
+    box-shadow: 0 5px 15px rgba(143, 211, 206, 0.2);
+    transform: translateY(-2px);
+}
+
+.volunteer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.volunteer-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.volunteer-email {
+    color: #666;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.volunteer-email::before {
+    content: "📧";
+}
+
+/* STATUS BADGES */
+.status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.status.done {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status.not-done {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* BUTTONS */
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-success {
+    background: #8FD3CE;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #7ac4be;
+}
+
+.btn-danger {
+    background: #e76f51;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #d65c3e;
+}
+
+.btn-warning {
+    background: #f4a261;
+    color: white;
+}
+
+.btn-warning:hover {
+    background: #e69146;
+}
+
+.btn-complete {
+    background: #2a9d8f;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.btn-complete:hover {
+    background: #23867a;
+}
+
+/* EMPTY STATE */
+.empty-message {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 18px;
+    background: #f8fdfc;
+    border-radius: 15px;
+    border: 2px dashed #8FD3CE;
+}
+
+/* STATUS MESSAGE */
+.status-message {
+    text-align: center;
+    padding: 20px;
+    color: #2a9d8f;
+    font-style: italic;
+    background: #f8fdfc;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+/* FORMS */
+form {
+    margin: 0;
+}
+
+form.inline-form {
+    display: inline-block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    nav ul {
+        justify-content: center;
+    }
+    
+    .volunteer-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .btn-group {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}

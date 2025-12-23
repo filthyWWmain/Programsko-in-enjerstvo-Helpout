@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Register_page</title>
+        <!--.... Jer mora raditi na 67 ***** browsera.... -->
+        <link rel="stylesheet" type="text/css" href="../styles/normalize.css" />
+        <!-- main CSS sheet-->
+        <link rel="stylesheet" type="text/css" href="../styles/register_option.css" />
+    </head>
+    <body>
+        <img class="login_register_bg_img" src="../images/register_login_bg_img.png">
+        <form action="../includes/user_inputs.php" method ="post">
+            <h2>REGISTER</h2>
+            <h3>Register as a volunteer or an organization</h3>
+            <label for = "Volonter">Volonter</label>
+            <button type="button" onclick="window.location.href='register_volonter.html'">Volonter</button>
+            <label for = "organization">Organization?</label>
+            <button type="button" onclick="window.location.href='register_udruga.html'">Organization</button>
+            <button type="button" id="button_back" onclick="window.location.href='Helpout_main.php'">Go back....</button>
+        </form>
+    </body>
+</html>
